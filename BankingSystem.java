@@ -62,7 +62,7 @@ public class BankingSystem{
             double amount = scanner.nextDouble();
             if (amount > 0) {
                 balances[index] += amount;
-                System.out.println("Deposit successful. New balance: " + balances[index]);
+                System.out.printf("Deposit successful.%nNew balance: %.2f%n" , balances[index]);
             } else {
                 System.out.println("Invalid amount. Please enter a positive value.");
             }
@@ -81,7 +81,7 @@ public class BankingSystem{
             double amount = scanner.nextDouble();
             if (amount > 0 && amount <= balances[index]) {
                 balances[index] -= amount;
-                System.out.println("Withdrawal successful. New balance: " + balances[index]);
+                System.out.printf("Withdrawal successful.%nNew balance: %.2f%n" , balances[index]);
             } else {
                 System.out.println("Invalid amount or insufficient balance.");
             }
@@ -96,7 +96,7 @@ public class BankingSystem{
 
         int index = findAccount(accountNumbers, accountNumber);
         if (index != -1) {
-            System.out.println("Account Balance: " + balances[index]);
+            System.out.printf("Account Balance: %.2f%n" , balances[index]);
         } else {
             System.out.println("Account not found.");
         }
