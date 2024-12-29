@@ -3,7 +3,7 @@
 - It does not contain file interactions.
 - All the interactions done upon debugging is temporary, the programme does not have any history.
 
-![monies](https://pixabay.com/gifs/money-cash-dollars-paper-3d-6509/)
+![monies](money-6509_256.gif)
 
   ## Team Members
   ![Static Badge](https://img.shields.io/badge/Eilli-FE4164)
