@@ -5,6 +5,12 @@
 
 ![monies](money-6509_256.gif)
 
+## Features
+- Withdraw money
+- Deposit money
+- Check balance
+- Transfer money
+
 ## How to Set Up the Tool
 *For best experience, we recommend the Visual Studio Code IDE.*
 
@@ -20,6 +26,15 @@ git clone https://github.com/Schumann1237/BankingSystem.git
 cd BankingSystem
 ```
 Or simply download and extract the ZIP file.
+
+### 3. Run the project
+Type this into the Visual Studio Code terminal.
+
+```bash
+java BankingSystem.java
+```
+
+## That's it! You're all set.
 
 ## Team Members 
 ![Static Badge](https://img.shields.io/badge/Eilli-FE4164)
