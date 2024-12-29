@@ -5,10 +5,27 @@
 
 ![monies](money-6509_256.gif)
 
-  ## Team Members
-  ![Static Badge](https://img.shields.io/badge/Eilli-FE4164)
-  ![Static Badge](https://img.shields.io/badge/Isaac-005C29)
-  ![Static Badge](https://img.shields.io/badge/Nicholas-00A19B)
-  ![Static Badge](https://img.shields.io/badge/Shazwi-1035AC)
+## How to Set Up the Tool
+*For best experience, we recommend the Visual Studio Code IDE.*
+
+### 1. Install Java 
+
+Make sure Java is installed on your computer. You can download it from the official [Java website](https://www.java.com/download/ie_manual.jsp).
+
+### 2. Clone the Repository or Download the ZIP
+Clone or download this repository to your local machine:
+
+```bash
+git clone https://github.com/Schumann1237/BankingSystem.git
+cd BankingSystem
+```
+Or simply download and extract the ZIP file.
+
+## Team Members 
+![Static Badge](https://img.shields.io/badge/Eilli-FE4164)
+![Static Badge](https://img.shields.io/badge/Isaac-005C29)
+![Static Badge](https://img.shields.io/badge/Nicholas-00A19B)
+![Static Badge](https://img.shields.io/badge/Shazwi-1035AC)
+
 
 
