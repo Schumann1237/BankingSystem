@@ -138,7 +138,7 @@ public class BankingSystem{
         balances[senderIndex] -= amount;
         balances[receiverIndex] += amount;
 
-        System.out.println("Transfer successful! $" + amount + " transferred from account " + senderAccount + " to account " + receiverAccount + ".");
+        System.out.printf("Transfer successful! $%.2f transferred from account %d to account %d.%n", amount, senderAccount, receiverAccount);
     }
 
 }
