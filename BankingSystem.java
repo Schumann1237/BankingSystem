@@ -13,7 +13,8 @@ public class BankingSystem{
             System.out.println("1. Deposit");
             System.out.println("2. Balance Inquiry");
             System.out.println("3. Withdraw");
-            System.out.println("4. Exit");
+            System.out.println("4. Transfer Money");
+            System.out.println("5. Exit");
             System.out.print("Enter Your Choice: ");
 
             choice = scan.nextInt();
@@ -27,14 +28,17 @@ public class BankingSystem{
                     break;
                 case 3:
                     withdraw(scan, accountNumbers, balances);
-                    break;
+                    break; 
                 case 4:
-                    System.out.println("Exiting the system. Thank you.");
+                    transferMoney(scan, accountNumbers, balances); // Call transferMoney
+                    break;
+                case 5:
+                    System.out.println("Exiting the system. Thank you!");
                     break;
                 default:
-                    System.out.println("Invalid choice. Please try again."); 
-            }
-        } while (choice != 4);
+                    System.out.println("Invalid choice. Please try again.");
+                    }
+        } while (choice != 5);
 
         scan.close();
     }
@@ -96,6 +100,45 @@ public class BankingSystem{
         } else {
             System.out.println("Account not found.");
         }
+    }  
+
+    /**
+     * Transfers money between accounts.
+     *
+     * @param scanner Scanner object for user input.
+     * @param accountNumbers Array of account numbers.
+     * @param balances Array of account balances.
+     */
+    public static void transferMoney(Scanner scanner, int[] accountNumbers, double[] balances) {
+        System.out.print("Enter sender's account number: ");
+        int senderAccount = scanner.nextInt();
+
+        System.out.print("Enter receiver's account number: ");
+        int receiverAccount = scanner.nextInt();
+
+        System.out.print("Enter amount to transfer: ");
+        double amount = scanner.nextDouble();
+
+        int senderIndex = -1, receiverIndex = -1;
+        for (int i = 0; i < accountNumbers.length; i++) {
+            if (accountNumbers[i] == senderAccount) senderIndex = i;
+            if (accountNumbers[i] == receiverAccount) receiverIndex = i;
+        }
+
+        if (senderIndex == -1 || receiverIndex == -1) {
+            System.out.println("One or both account numbers are invalid.");
+            return;
+        }
+
+        if (balances[senderIndex] < amount) {
+            System.out.println("Insufficient balance in sender's account.");
+            return;
+        }
+
+        balances[senderIndex] -= amount;
+        balances[receiverIndex] += amount;
+
+        System.out.println("Transfer successful! $" + amount + " transferred from account " + senderAccount + " to account " + receiverAccount + ".");
     }
-  
+
 }
